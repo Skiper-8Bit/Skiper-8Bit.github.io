@@ -1,0 +1,373 @@
+/*
+    Fonts Section
+*/
+
+.poppins-regular {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* 
+    Elements Section
+*/
+body {
+    height: 100%;
+    width: 100%;
+    background: #111111;
+
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* 
+    ---------- Classes ----------
+*/
+
+/*
+    -- Navigation Bar Section --
+*/
+.navbar ul {
+    margin-top: 1%;
+    margin-left: 40%;
+    margin-right: 7%;
+
+    list-style-type: none;
+    overflow: visible;
+    display: flex;
+    justify-content: right;
+}
+
+.navbar li a {
+    display: block;
+    padding-top: 1em;
+    padding-right: 3em;
+    padding-left: 0.1em;
+
+    color: #FFFFFF;
+    font-size: 140%;
+    font-weight: bolder;
+    text-align: center;
+    text-decoration: underline solid rgba(189, 81, 67, 0) 0.1em;
+    text-underline-offset: 0.2em;
+
+    transition: color 0.5s, text-decoration-color 0.5s, text-underline-offset 0.4s;
+}
+
+.navbar li a:hover {
+    opacity: 1;
+    text-decoration-color: rgba(189, 81, 67, 0.5);
+    color: #bd5143;
+    text-underline-offset: 0.5em;
+}
+
+#Home {
+    animation: Home;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+}
+
+#Services {
+    animation: Services;
+    animation-duration: 0.75s;
+    animation-iteration-count: 1;
+}
+
+#Skills {
+    animation: Skills;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+}
+
+#Education {
+    animation: Education;
+    animation-duration: 1.25s;
+    animation-iteration-count: 1;
+}
+
+#Experience {
+    animation: Experience;
+    animation-duration: 1.5s;
+    animation-iteration-count: 1;
+}
+
+#Contact {
+    animation: Contact;
+    animation-duration: 1.75s;
+    animation-iteration-count: 1;
+}
+
+/*
+    --GIF Section--
+*/
+.Description_Container {
+    display: flex;
+    align-items: center;
+    color: #FFFFFF;
+}
+
+.Description h1{
+    line-height: 0.8em;
+}
+
+.Highlight_Color {
+    color: #bd5143;
+}
+
+.GIF {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 1em;
+    margin-left: 1%;
+    margin-top: 2%;
+
+    animation: GIF;
+    animation-duration: 1.5s;
+    animation-timing-function: ease;
+    animation-iteration-count: 1;
+}
+
+#Name {
+    font-size: 400%;
+
+    animation: Name;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+}
+
+#Post {
+    font-size: 350%;
+
+    animation: Post;
+    animation-duration: 1.25s;
+    animation-iteration-count: 1;
+}
+
+#Description_Paragraph {
+    font-size: 120%;
+    font-weight: bold;
+    margin-right: 20%;
+
+    animation: Description;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+}
+
+#Caret {
+    position: relative;
+    bottom: 0.1em;
+
+    color: #FFFFFF;
+
+    animation: Caret_Effect;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes GIF {
+    from{
+        opacity: 0;
+        transform: translate(-10em, 0em);
+    }
+    to{
+        opacity: 1;
+        transform: translate(0em, 0em);
+    }
+}
+
+@keyframes Description {
+    from{
+        opacity: 0;
+        transform: rotateX(90deg);
+    }
+    to{
+        opacity: 1;
+        transform: rotateX(0deg);
+    }
+}
+
+/*
+    Icons Customization Section
+*/
+
+.Socials_Icon i{
+    position: relative;
+    font-size: 3em;
+    color: #bd5143;
+
+    transition: color 0.4s, transform 0.4s;
+}
+
+.Socials_Icon i:hover{
+    color: #FFFFFF;
+    transform: translate(0em, -0.1em);
+}
+
+#LinkedIn {
+    animation: Icon;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+}
+
+#X {
+    animation: Icon;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+}
+
+#GitHub {
+    animation: Icon;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+}
+
+@keyframes Icon {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+/*
+    Hire Section
+*/
+
+#Hire_Button {
+    display: inline-block;
+
+    border-radius: 0.2em;
+    border: none;
+    background-color: #bd5143;
+
+    text-align: center;
+    font-weight: bolder;
+    font-size: 2em;
+    margin-left: 0.2em;
+    margin-top: 0.8em;
+    padding: 1% 10%;
+    color: #FFFFFF;
+
+    transition: background-color 0.5s, color 0.5s;
+
+    animation: Hire;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+}
+
+#Hire_Button:hover {
+    background-color: #FFFFFF;
+    color: #bd5143;
+}
+
+@keyframes Hire {
+    from{
+        opacity: 0;
+        transform: translate(0em, 3em);
+    }
+    to{
+        opacity: 1;
+        transform: translate(0em, 0em);
+    }
+}
+
+/*
+    Animations
+*/
+
+@keyframes Home {
+    from{
+        opacity: 0;
+        transform: translate(0em, 1em);
+    }
+    to{
+        opacity: 1;
+        transform: translate(0em, 0em);
+    }
+}
+
+@keyframes Services {
+    from{
+        opacity: 0;
+        transform: translate(0em, 2em);
+    }
+    to{
+        opacity: 1;
+        transform: translate(0em, 0em);
+    }
+}
+
+@keyframes Skills {
+    from{
+        opacity: 0;
+        transform: translate(0em, 3em);
+    }
+    to{
+        opacity: 1;
+        transform: translate(0em, 0em);
+    }
+}
+
+@keyframes Education {
+    from{
+        opacity: 0;
+        transform: translate(0em, 4em);
+    }
+    to{
+        opacity: 1;
+        transform: translate(0em, 0em);
+    }
+}
+
+@keyframes Experience {
+    from{
+        opacity: 0;
+        transform: translate(0em, 5em);
+    }
+    to{
+        opacity: 1;
+        transform: translate(0em, 0em);
+    }
+}
+
+@keyframes Contact {
+    from{
+        opacity: 0;
+        transform: translate(0em, 6em);
+    }
+    to{
+        opacity: 1;
+        transform: translate(0em, 0em);
+    }
+}
+
+@keyframes Name {
+    from{
+        opacity: 0;
+        transform: translate(2em, 0em);
+    }
+    to{
+        opacity: 1;
+        transform: translate(0em, 0em);
+    }
+}
+
+@keyframes Post {
+    from{
+        opacity: 0;
+        transform: translate(4em, 0em);
+    }
+    to{
+        opacity: 1;
+        transform: translate(0em, 0em);
+    }
+}
+
+@keyframes Caret_Effect{
+    0%{opacity: 1;}
+    50%{opacity: 0;}
+    100%{opacity: 1;}
+}
