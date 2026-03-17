@@ -28,6 +28,9 @@ body {
 /*
     -- Navigation Bar Section --
 */
+.navbar {
+}
+
 .navbar ul {
     margin-top: 1%;
     margin-left: 40%;
@@ -103,8 +106,13 @@ body {
 */
 .Description_Container {
     display: flex;
-    align-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
     color: #FFFFFF;
+}
+
+.Description {
+    align-content: center;
 }
 
 .Description h1{
@@ -117,11 +125,11 @@ body {
 
 .GIF {
     display: flex;
-    justify-content: space-between; 
-    align-items: center; 
     padding: 1em;
     margin-left: 1%;
     margin-top: 2%;
+
+    border-radius: 3em;
 
     animation: GIF;
     animation-duration: 1.5s;
@@ -141,7 +149,9 @@ body {
     font-size: 350%;
 
     animation: Post;
+    animation-fill-mode: backwards;
     animation-duration: 1.25s;
+    animation-delay: 0.25s;
     animation-iteration-count: 1;
 }
 
@@ -151,7 +161,9 @@ body {
     margin-right: 20%;
 
     animation: Description;
+    animation-fill-mode: backwards;
     animation-duration: 2s;
+    animation-delay: 0.6s;
     animation-iteration-count: 1;
 }
 
@@ -164,6 +176,28 @@ body {
     animation: Caret_Effect;
     animation-duration: 2s;
     animation-iteration-count: infinite;
+}
+
+@keyframes Name {
+    from{
+        opacity: 0;
+        transform: translate(2em, 0em);
+    }
+    to{
+        opacity: 1;
+        transform: translate(0em, 0em);
+    }
+}
+
+@keyframes Post {
+    0%{
+        opacity: 0;
+        transform: translate(4em, 0em);
+    }
+    to{
+        opacity: 1;
+        transform: translate(0em, 0em);
+    }
 }
 
 @keyframes GIF {
@@ -195,6 +229,7 @@ body {
 .Socials_Icon i{
     position: relative;
     font-size: 3em;
+    padding-right: 0.5em;
     color: #bd5143;
 
     transition: color 0.4s, transform 0.4s;
@@ -207,19 +242,25 @@ body {
 
 #LinkedIn {
     animation: Icon;
+    animation-fill-mode: backwards;
     animation-duration: 1s;
+    animation-delay: 0.25s;
     animation-iteration-count: 1;
 }
 
 #X {
     animation: Icon;
-    animation-duration: 2s;
+    animation-fill-mode: backwards;
+    animation-duration: 1s;
+    animation-delay: 0.5s;
     animation-iteration-count: 1;
 }
 
 #GitHub {
     animation: Icon;
-    animation-duration: 3s;
+    animation-fill-mode: backwards;
+    animation-duration: 1s;
+    animation-delay: 1s;
     animation-iteration-count: 1;
 }
 
@@ -254,7 +295,9 @@ body {
     transition: background-color 0.5s, color 0.5s;
 
     animation: Hire;
+    animation-fill-mode: backwards;
     animation-duration: 1s;
+    animation-delay: 0.25s;
     animation-iteration-count: 1;
 }
 
@@ -337,28 +380,6 @@ body {
     from{
         opacity: 0;
         transform: translate(0em, 6em);
-    }
-    to{
-        opacity: 1;
-        transform: translate(0em, 0em);
-    }
-}
-
-@keyframes Name {
-    from{
-        opacity: 0;
-        transform: translate(2em, 0em);
-    }
-    to{
-        opacity: 1;
-        transform: translate(0em, 0em);
-    }
-}
-
-@keyframes Post {
-    from{
-        opacity: 0;
-        transform: translate(4em, 0em);
     }
     to{
         opacity: 1;
